@@ -35,8 +35,7 @@ First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Instal
 
 Clone & compile:
 
-    git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/sammy007/open-ethereum-pool.git
+    git clone https://github.com/ellaism/open-ethereum-pool.git
     cd open-ethereum-pool
     make
 
@@ -46,7 +45,7 @@ Install redis-server.
 
     ./build/bin/open-ethereum-pool config.json
 
-You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
+You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>. See [wiki](https://github.com/ellaism/open-ethereum-pool/wiki/Running-Pool) for more ways to run the pool.
 
 ### Building Frontend
 
@@ -311,6 +310,7 @@ This pool is tested to work with [Ethcore's Parity](https://github.com/ethcore/p
 ### Credits
 
 Made by sammy007. Licensed under GPLv3.
+Modified by The Ellaism Project.
 
 #### Contributors
 
