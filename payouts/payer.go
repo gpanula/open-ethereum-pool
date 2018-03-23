@@ -5,6 +5,7 @@ import (
 	"log"
 	"math/big"
 	"os"
+	"os/exec"
 	"strconv"
 	"time"
 	"sync"
@@ -185,6 +186,16 @@ func (u *PayoutsProcessor) process() {
 			u.halt = true
 			u.lastFail = err
 			break
+		}
+
+		if postCommand, present := os.LookupEnv("POST_PAYOUT_HOOK"); present {
+			go func(postCommand string, login string, value string) {
+				out, err := exec.Command(postCommand, login, value).CombinedOutput()
+				if err != nil {
+					log.Printf("WARNING: Error running post payout hook: %s", err.Error())
+				}
+				log.Printf("Running post payout hook with result: %s", out)
+			}(postCommand, login, value)
 		}
 
 		// Log transaction hash
