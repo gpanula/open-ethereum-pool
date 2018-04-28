@@ -1,5 +1,7 @@
 ## Open Source Ellaism Mining Pool
 
+[![Build Status](https://travis-ci.org/ellaism/open-ethereum-pool.svg?branch=master)](https://travis-ci.org/ellaism/open-ethereum-pool)
+
 Consider mining in [Dev Pool](https://pool.ellaism.org) or [donate to Dev Fund](https://ellaism.org/donate/) if you like this fork.
 
 ### Features
@@ -23,7 +25,7 @@ Consider mining in [Dev Pool](https://pool.ellaism.org) or [donate to Dev Fund](
 
 Dependencies:
 
-  * go >= 1.6
+  * go >= 1.9
   * geth or parity
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
